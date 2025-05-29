@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(response => {
                 localStorage.setItem('token', response.token);
                 localStorage.setItem('currentUser', JSON.stringify(response));
-                window.location.href = "../root/home.html";
+                window.location.href = "./pages/home.html";
             })
             .catch(err => alert('Login failed: ' + err.message));
     });
