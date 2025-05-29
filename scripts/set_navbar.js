@@ -6,6 +6,6 @@ fetch('../components/navbar.html')
     document.getElementById('logout-button').addEventListener('click', () => {
         localStorage.removeItem('currentUser');
         localStorage.removeItem('token');
-        window.location.href = "../index.html";
+        window.location.href = "index.html";
     });
   });
