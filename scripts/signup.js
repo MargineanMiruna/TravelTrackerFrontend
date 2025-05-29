@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             })
             .then((data) => {
                 alert(`Welcome ${data.username}! Your account has been created.`);
-                window.location.href = "index.html";
+                window.location.href = "../root/index.html";
             })
             .catch((err) => {
                 alert("Signup failed: " + err.message);

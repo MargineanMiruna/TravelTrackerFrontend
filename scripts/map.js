@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!token) {
         alert("You are not logged in. Please log in first.");
-        window.location.href = "index.html";
+        window.location.href = "../root/index.html";
         return;
     }
 
