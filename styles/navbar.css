@@ -1,0 +1,55 @@
+.navbar {
+    background-color: white !important; 
+    padding-top: 0.5px;
+    padding-bottom: 0.2px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.brand {
+    color: yellowgreen !important;
+    font-size: 48px !important;
+    font-family: fantasy;
+    margin-left: 1rem;
+}
+
+.links .nav-link {
+    color: dodgerblue !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.links .nav-link:hover {
+    color: yellowgreen !important;
+}
+
+.links .btn {
+    border-radius: 20px;
+	border: 1px solid skyblue !important;
+	background-color: dodgerblue !important;
+	color: #FFFFFF !important;
+	font-size: 14px !important;
+	font-weight: bold;
+	padding: 12px 12px !important;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+    margin: 1rem;
+}
+
+.links .btn:hover {
+    background-color: yellowgreen !important;
+    border-color: lightgreen !important;
+    color: white !important;
+}
+
+.links .btn:active {
+    transform: scale(0.95);
+}

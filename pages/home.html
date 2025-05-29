@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Home - Travel Tracker</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/navbar.css" />
+  <link rel="stylesheet" href="../styles/background.css" />
+  <link rel="stylesheet" href="../styles/modal.css" />
+  <link rel="stylesheet" href="../styles/home.css" />
+  <script src="../scripts/set_navbar.js"></script>
+  <script src="../scripts/set_background.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+  <script src="../scripts/modal.js"></script>
+  <script src="../scripts/stats.js"></script>
+
+</head>
+
+<body>
+  <div id="navbar-container"></div>
+  <div id="background-carousel"></div>
+
+  <div class="background-overlay">
+    <div class="container">
+      <div class="text-container">
+        <h1>Welcome, <span id="welcome-username">user</span>!</h1>
+        <p>Track your travels, treasure your memories.</p>
+      </div>
+      <button id="add-trip" class="open"><i class="bi bi-plus-circle-fill"></i>&nbsp;Add New Trip</button>
+    </div>
+    <div class="stats-container">
+      <h1>Statistics</h1>
+      <div class="stats">
+        <div class="stat-item">
+          <p id="total-trips">0</p>
+          <h3>completed trips</h3>
+        </div>
+        <div class="stat-item">
+          <p id="countries-visited">0</p>
+          <h3>countries visited</h3>
+        </div>
+        <div class="stat-item">
+          <p id="total-days">0</p>
+          <h3>days spent travelling</h3>
+        </div>
+        <div class="stat-item">
+          <p id="world-percentage">0%</p>
+          <h3>of the world visited</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-container" class="modal-container">
+    <form class="modal-form" id="trip-form">
+      <button id="close-modal" class="close"><i class="bi bi-x-square"></i></button>
+      <h2>Add New Trip</h2>
+      <div class="form-group">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="city" placeholder="City" required>
+          <label for="floatingInput">City</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="country" placeholder="Country" required>
+          <label for="floatingInput">Country</label>
+        </div>
+        <div class="form-floating">
+          <select class="form-select" id="tripType" aria-label="Type">
+            <option selected>Choose...</option>
+            <option value="Road Trip">Road Trip</option>
+            <option value="Business Trip">Business Trip</option>
+            <option value="City Break">City Break</option>
+            <option value="All Inclusive">All Inclusive</option>
+            <option value="Cruise">Cruise</option>
+            <option value="Group Tour">Group Tour</option>
+            <option value="Camping">Camping</option>
+            <option value="Beach Holiday">Beach Holiday</option>
+            <option value="Hiking Adventure">Hiking Adventure</option>
+            <option value="Girls/Boys Trip">Girls/Boys Trip</option>
+            <option value="Family Vacation">Family Vacation</option>
+            <option value="Ski Trip">Ski Trip</option>
+          </select>
+          <label for="floatingSelect">Type of trip</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="startDate" placeholder="Start date" onfocus="(this.type='date')"
+            onblur="(this.type='text')" required>
+          <label for="floatingInput">Start date</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="endDate" placeholder="End date" onfocus="(this.type='date')"
+            onblur="(this.type='text')" required>
+          <label for="floatingInput">End date</label>
+        </div>
+        <div class="form-floating">
+          <select class="form-select" id="transport" aria-label="Transport">
+            <option selected>Choose...</option>
+            <option value="Plane">Plane</option>
+            <option value="Car">Car</option>
+            <option value="Train">Train</option>
+            <option value="Bus">Bus</option>
+            <option value="Boat">Boat</option>
+            <option value="Bicycle">Bicycle</option>
+          </select>
+          <label for="floatingSelect">Transport</label>
+        </div>
+      </div>
+      <div class="form-floating description-box">
+        <textarea class="form-control" placeholder="Leave a description here" id="description"
+          style="height: 100px"></textarea>
+        <label for="floatingTextarea2">Description</label>
+      </div>
+      <div class="input-group mb-3 file-upload">
+        <label class="input-group-text" for="inputGroupFile01">Picture</label>
+        <input type="file" class="form-control" id="image" accept="image/*" />
+      </div>
+      <button id="add-and-close" type="submit" class="add"><i class="bi bi-check-square-fill"></i>&nbsp;Save</button>
+    </form>
+  </div>
+
+</body>
+
+</html>

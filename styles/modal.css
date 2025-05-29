@@ -1,0 +1,100 @@
+.modal-container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-container.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-form {
+    background-color: white;
+    color: #424141;
+    padding: 2rem;
+    border-radius: 20px;
+    display: flex;
+	align-items: center;
+	justify-content: start;
+	flex-direction: column;
+    z-index: 12;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 600px;
+    height: 500px;
+    max-width: 100%;
+    max-width: 100%;
+}
+
+.modal-form h2 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    color: #424141;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: repeat(3, 31%);
+    gap: 1rem;
+    row-gap: 1rem;
+    width: 100%;
+}
+
+.form-group input {
+    width: 100%;
+    margin: 0;
+}
+
+.description-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.file-upload label,
+.file-upload input {
+    color: #797878;
+}
+
+.close {
+    border: none;
+    background-color: transparent;
+    color: #424141;
+    font-size: 24px;
+    align-self: flex-end;
+}
+
+.close:hover {
+    color: dodgerblue;
+}
+
+.add {
+    border: none;
+    background-color: transparent;
+    color: #424141;
+    font-size: 24px;
+    align-self: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.add:hover {
+    color: yellowgreen;
+}
