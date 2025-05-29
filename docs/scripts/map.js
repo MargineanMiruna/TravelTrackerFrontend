@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const normalizedVisited = visitedCities.map(city => city.trim().toLowerCase());
 
         // Fetch GeoJSON data
-        return fetch('../assets/custom.geo.json')
+        return fetch('assets/custom.geo.json')
             .then(response => response.json())
             .then(geoData => ({ normalizedVisited, geoData }));
     })
