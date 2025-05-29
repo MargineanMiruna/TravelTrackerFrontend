@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const token = JSON.parse(localStorage.getItem("currentUser"))?.token;
         if (!token) {
             alert("You are not logged in. Please log in first.");
-            window.location.href = "login.html";
+            window.location.href = "index.html";
             return;
         }
 
